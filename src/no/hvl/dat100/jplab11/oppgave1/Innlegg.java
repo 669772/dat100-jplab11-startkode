@@ -79,7 +79,7 @@ public abstract class Innlegg {
 		
 		boolean lik = false;
 		
-		if () {
+		if (this.id == innlegg.getId()) {
 			lik = true;
 		}
 		return lik;
