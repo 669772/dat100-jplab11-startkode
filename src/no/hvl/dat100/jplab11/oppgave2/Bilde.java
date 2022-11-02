@@ -4,12 +4,8 @@ import no.hvl.dat100.jplab11.common.TODO;
 
 public class Bilde extends Tekst {
 
-	private int id;
-	private String bruker;
-	private String dato;
-	private int likes;
-	private String tekst;
-	private String url;
+	protected String tekst;
+	protected String url;
 	// TODO - objekt variable
 
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {

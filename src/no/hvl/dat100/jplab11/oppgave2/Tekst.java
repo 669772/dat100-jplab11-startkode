@@ -5,11 +5,7 @@ import no.hvl.dat100.jplab11.oppgave1.*;
 
 public class Tekst extends Innlegg {
 
-	private int id;
-	private String bruker;
-	private String dato;
-	private int likes;
-	private String tekst;
+	protected String tekst;
 	// TODO: objektvariable 
 	
 	public Tekst () {
