@@ -56,13 +56,10 @@ public class Blogg {
 
 	public boolean finnes(Innlegg innlegg) {
 		
-		boolean funnet = false;
-		
 		if (finnInnlegg(innlegg) == -1) {
-			return funnet;
+			return false;
 		} else {
-			funnet = true;
-			return funnet;
+			return true;
 		}
 		
 	}
@@ -92,7 +89,16 @@ public class Blogg {
 	}
 
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method());
+		
+		String str = innleggTab.length + "\n";
+		
+		for (Innlegg a : innleggTab) {
+			
+			str += a.toString();
+			
+		}
+		return str;
+		
 	}
 
 	// valgfrie oppgaver nedenfor
