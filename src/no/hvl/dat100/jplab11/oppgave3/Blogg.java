@@ -6,24 +6,33 @@ import no.hvl.dat100.jplab11.oppgave1.*;
 public class Blogg {
 
 	
-	protected Innlegg[] innlegg;
+	protected Innlegg[] innleggTab;
 	protected int nesteledig;
 	// TODO: objektvariable 
 
 	public Blogg() {
 		
+		Blogg blogger = new Blogg(20);
+		
 	}
 
 	public Blogg(int lengde) {
 		
+		innleggTab = new Innlegg [lengde];
+		nesteledig = 0;
+		
 	}
 
 	public int getAntall() {
-		throw new UnsupportedOperationException(TODO.method());
+
+		int antall = this.nesteledig;
+        return antall;
+        
 	}
 	
 	public Innlegg[] getSamling() {
-		throw new UnsupportedOperationException(TODO.method());
+		
+		return innleggTab;
 
 	}
 	
