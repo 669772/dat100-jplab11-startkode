@@ -5,6 +5,9 @@ import no.hvl.dat100.jplab11.oppgave1.*;
 
 public class Blogg {
 
+	
+	protected Innlegg[] innlegg;
+	protected int nesteledig;
 	// TODO: objektvariable 
 
 	public Blogg() {
@@ -12,7 +15,7 @@ public class Blogg {
 	}
 
 	public Blogg(int lengde) {
-		throw new UnsupportedOperationException(TODO.constructor("Blogg"));
+		
 	}
 
 	public int getAntall() {
