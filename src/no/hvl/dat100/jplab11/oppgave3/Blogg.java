@@ -12,7 +12,7 @@ public class Blogg {
 
 	public Blogg() {
 		
-		Blogg blogger = new Blogg(20);
+		innleggTab = new Innlegg[20];
 		
 	}
 
