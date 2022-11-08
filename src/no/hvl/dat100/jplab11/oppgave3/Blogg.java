@@ -92,7 +92,7 @@ public class Blogg {
 
 	public String toString() {
 		
-		String str = innleggTab.length + "\n";
+		String str = nesteledig + "\n";
 		
 		for (int pos = 0; pos < nesteledig; pos++) {
 			
