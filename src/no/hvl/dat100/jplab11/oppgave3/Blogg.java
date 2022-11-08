@@ -5,8 +5,8 @@ import no.hvl.dat100.jplab11.oppgave1.*;
 
 public class Blogg {
 
-	protected Innlegg[] innleggTab;
-	protected int nesteledig;
+	private Innlegg[] innleggTab;
+	private int nesteledig;
 	// TODO: objektvariable
 
 	public Blogg() {
@@ -39,8 +39,11 @@ public class Blogg {
 
 		boolean funnet = false;
 		int pos = 0;
-		while (pos < nesteledig && !funnet) {
-			if (innleggTab[pos].erLik(innlegg)) {
+		
+		while (pos < innleggTab.length && !funnet) {
+			if (innleggTab[pos] == null) {
+				return -1;
+			} else if (innleggTab[pos].erLik(innlegg)) {
 				funnet = true;
 			} else {
 				pos++;
@@ -56,11 +59,10 @@ public class Blogg {
 
 	public boolean finnes(Innlegg innlegg) {
 		
-		if (finnInnlegg(innlegg) == -1) {
-			return false;
-		} else {
-			return true;
-		}
+        if (finnInnlegg(innlegg) == -1)
+            return false;
+        else
+            return true;
 		
 	}
 
@@ -76,9 +78,9 @@ public class Blogg {
 
 	public boolean leggTil(Innlegg innlegg) {
 
-		boolean ny = finnInnlegg(innlegg) == -1;
+		boolean ny = finnes(innlegg);
 		
-		if (ny && nesteledig < innleggTab.length) {
+		if (!ny && ledigPlass()) {
 			innleggTab[nesteledig] = innlegg;
 			nesteledig++;
 			return true;
@@ -92,13 +94,12 @@ public class Blogg {
 		
 		String str = innleggTab.length + "\n";
 		
-		for (Innlegg a : innleggTab) {
+		for (int pos = 0; pos < nesteledig; pos++) {
 			
-			str += a.toString();
+			str += innleggTab[pos].toString();
 			
 		}
 		return str;
-		
 	}
 
 	// valgfrie oppgaver nedenfor

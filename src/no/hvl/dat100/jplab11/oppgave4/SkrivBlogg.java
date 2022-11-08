@@ -15,7 +15,7 @@ public class SkrivBlogg {
 		PrintWriter skriver = null;
 		
 		try {
-			skriver = new PrintWriter(mappe + "\n" + filnavn);
+			skriver = new PrintWriter(mappe + "/" + filnavn);
 			
 			skriver.print(samling.toString());
 		}
